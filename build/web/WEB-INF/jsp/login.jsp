@@ -14,12 +14,12 @@
         <link href="<c:url value="resources/css/contas.css" />" rel="stylesheet" type="text/css" />
         <title>Login</title>
     </head>
-<body>
+<body id="pageLogin">
     <div class="row h-100 d-flex justify-content-center align-items-center">
         <div id="box-login" class="text-center">
             <h1>Login</h1>  
 
-            <form action="login" method="POST">
+            <form action="validaLogin" method="POST">
 
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
@@ -34,8 +34,8 @@
                     </div>
                     <input type="password" class="form-control" name="senha">
                 </div>
-
-                <a href="pessoas" class="btn btn-success w-100" title="Entrar">Entrar</a>
+                
+                <button type="submit" class="btn btn-success w-100" title="Entrar">Entrar</button>
 
             </form> <!--form-->
         </div>

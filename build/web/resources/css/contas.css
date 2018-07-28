@@ -40,6 +40,7 @@ ul li a{
     display: inline-block;
     text-transform: uppercase;
     color: #fff;
+    padding: 3px 5px;
 }
 ul li a:hover{
     color: #28a745;
@@ -63,4 +64,23 @@ form{
 }
 #box-login form{
     margin-bottom: 0;
+}
+.statusLogin{
+    font-weight: 700;
+    background-color: #28a745;
+    color: white;
+    margin: 0;
+    padding: 3px 5px;
+}
+.btnSair a{
+    font-weight: 700;
+    background-color: #c70013;
+    color: white;
+    margin-left: 10px;
+}
+.btnSair a:hover{
+    color: white;
+}
+#pageLogin{
+    overflow: hidden;
 }

@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pessoas.Pessoa;
+import pessoas.ValidaLogin;
 
 /**
  *
@@ -20,8 +21,12 @@ import pessoas.Pessoa;
 public class PessoasController {
     
     @RequestMapping("/pessoas")
-    public String pessoas(){
-        return "pessoas/pessoas";
+    public String pessoas(HttpServletRequest request){
+        ValidaLogin validaLogin;
+        
+        validaLogin = new ValidaLogin();
+        
+        return validaLogin.validadorLogin(request.getSession(),"pessoas/pessoas");
     }
     
     @RequestMapping("/cadastroPessoas")
