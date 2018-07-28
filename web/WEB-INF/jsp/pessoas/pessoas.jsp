@@ -38,6 +38,7 @@
                             <td>CPF</td>
                             <td>Nome</td>
                             <td>Cidade</td>
+                            <td>Saldo</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -47,6 +48,7 @@
                             <td>${p.cpf}</td>
                             <td>${p.nome} ${p.sobrenome}</td>
                             <td>${p.cidade}-${p.estado}</td>
+                            <td>${p.saldo}</td>
                         </tr>
                         </c:forEach>
                     </tbody>
@@ -56,6 +58,7 @@
                             <td>CPF</td>
                             <td>Nome</td>
                             <td>Cidade</td>
+                            <td>Saldo</td>
                         </tr>
                     </tfoot>
                 </table>  

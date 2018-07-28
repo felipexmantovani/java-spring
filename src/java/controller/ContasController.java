@@ -60,4 +60,10 @@ public class ContasController {
         return "contas/sacar";
     }
     
+    @RequestMapping("/persistirDeposito")
+    public String persistirDeposito(){
+        
+        return "contas/mensagemDeposito";
+    }
+    
 }

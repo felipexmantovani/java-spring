@@ -26,6 +26,15 @@ public class Pessoa {
     private String cep;
     private String numeroConta;
     private String tipoConta;
+    private double saldo;
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
     
     public Pessoa(){
         super();

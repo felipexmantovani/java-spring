@@ -143,6 +143,16 @@
                         </div>
                     </div>
                     
+                    <hr>
+                    
+                    <h4>Saldo</h4>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon3">R$</span>
+                        </div>
+                        <input type="text" class="form-control" name="saldo">
+                    </div>
+                    
                     <button type="submit" class="btn btn-success w-100" title="Cadastrar">Cadastrar</button>
                     
                 </form>
