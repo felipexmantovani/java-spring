@@ -66,5 +66,5 @@
         </div> <!--row-->
               
     </div>
-</body>
-</html>
+    
+    <c:import url="../footer.jsp"></c:import>

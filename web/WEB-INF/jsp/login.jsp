@@ -18,7 +18,8 @@
     <div class="row h-100 d-flex justify-content-center align-items-center">
         <div id="box-login" class="text-center">
             <h1>Login</h1>  
-
+            
+            <p>Login: <strong>banco</strong> - senha: <strong>banco</strong></p>
             <form action="validaLogin" method="POST">
 
                 <div class="input-group mb-3">

@@ -35,17 +35,19 @@
                         <div class="input-group-prepend">
                             <label class="input-group-text" for="inputGroupSelect01">Conta</label>
                         </div>
-                        <select name="tipoConta" class="custom-select">
+                        <select id="contas" name="contas" class="custom-select">
                             <option selected>-</option>
-                            <c:forEach items="${pessoa}" var="p">
-                                <option value="">${p.numeroConta} - ${p.nome} ${p.sobrenome}</option>
+                            <c:forEach items="${pessoa}" var="p" varStatus="i">
+                                <option data-saldo="${p.saldo}" value="${i.count}">${p.numeroConta} - ${p.nome} ${p.sobrenome}</option>
                             </c:forEach>
                         </select>
                     </div>
                     
+                    <div class="alert alert-primary text-center d-none">Saldo Disponível <strong>${p.saldo}</strong></div>
+                    
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon3">Valor</span>
+                            <span class="input-group-text" id="basic-addon3">R$</span>
                         </div>
                         <input type="text" class="form-control" name="valor">
                     </div>
@@ -56,5 +58,5 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+
+    <c:import url="../footer.jsp"></c:import>

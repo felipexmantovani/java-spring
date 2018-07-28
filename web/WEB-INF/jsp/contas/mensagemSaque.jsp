@@ -12,18 +12,17 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="<c:url value="resources/css/bootstrap.css" />" rel="stylesheet" type="text/css" />
         <link href="<c:url value="resources/css/contas.css" />" rel="stylesheet" type="text/css" />
-        <title>Contas</title>
+        <title>Saque</title>
     </head>
 <body>
     <div class="container h-100">
         <div class="row h-100 d-flex justify-content-center align-items-center">
             <div class="col-sm-12 text-center">
-                <h2>Olá ${pessoa.nome} ${pessoa.sobrenome}</h2>
-                <div class="alert alert-success">Cadastrado realizado com sucesso!</div>
+                <div class="alert alert-success">Saque realizado com sucesso!</div>
 
                 <a href="pessoas" class="btn btn-info" title="Voltar">Voltar</a>
             </div>
         </div>
     </div>
-    
-    <c:import url="../footer.jsp"></c:import>
+</body>
+</html>

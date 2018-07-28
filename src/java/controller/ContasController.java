@@ -7,9 +7,11 @@ package controller;
 
 import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import pessoas.Pessoa;
 
 /**
@@ -61,9 +63,27 @@ public class ContasController {
     }
     
     @RequestMapping("/persistirDeposito")
-    public String persistirDeposito(){
-        
+    public String persistirDeposito(@RequestParam("contas") int indice, @RequestParam("valor") double valor, HttpSession session) {
+
+        ArrayList<Pessoa> pessoas = (ArrayList) session.getAttribute("pessoa");
+
+        pessoas.get(indice - 1).setSaldo(pessoas.get(indice - 1).getSaldo() + valor);
+
+        session.setAttribute("pessoa", pessoas);
+
         return "contas/mensagemDeposito";
+    }
+    
+    @RequestMapping("/persistirSaque")
+    public String persistirSaque(@RequestParam("contas") int indice, @RequestParam("valor") double valor, HttpSession session) {
+
+        ArrayList<Pessoa> pessoas = (ArrayList) session.getAttribute("pessoa");
+
+        pessoas.get(indice - 1).setSaldo(pessoas.get(indice - 1).getSaldo() - valor);
+
+        session.setAttribute("pessoa", pessoas);
+
+        return "contas/mensagemSaque";
     }
     
 }
